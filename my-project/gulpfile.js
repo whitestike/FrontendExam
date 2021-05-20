@@ -35,6 +35,10 @@ function styles(){
 function sass(){
     return gulp.src('./src/**/*.scss')
         .pipe(gulp_sass())
+        .pipe(postcss([
+            autoprefixer(),
+            cssnano(),
+        ]))
         .pipe(gulp.dest('./build'));
 }
 
@@ -66,15 +70,21 @@ function imageOpt(){
         .pipe(gulp.dest('./build'))
 }
 
+function svgOpt(){
+    return gulp.src('./src/**/*.svg')
+        .pipe(webp())
+        .pipe(gulp.dest('./build'))
+}
 
 function build(cb){cb();}
 
-exports.build = gulp.series(clean, gulp.parallel(styles, scripts, imageOpt, sass));
+exports.build = gulp.series(clean, gulp.parallel(styles, scripts, svgOpt,imageOpt, sass));
 exports.scripts = scripts;
 exports.styles = styles;
 exports.clean = clean;
 exports.imageOpt = imageOpt;
+exports.svgOpt = svgOpt;
 exports.sass = sass;
 exports.watch = watchAll;
 
-exports.default = gulp.series(clean, gulp.parallel(styles, scripts, imageOpt, sass), watchAll);
+exports.default = gulp.series(clean, gulp.parallel(styles, scripts, imageOpt, svgOpt, sass), watchAll);

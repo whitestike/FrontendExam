@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans:wght@400;700&display=swap');
+
+$text-black: #333333;
+$text-black-50p: #3333337F;
+$primary1: #BE6361;
+$text-white: #fff;
+$text-white-50p: #ffffff7F;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'DM sans', sans-serif;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+h1{
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 72px;
+}
+
+h2{
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 56px;
+}
+
+h3{
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 40px;
+}
+
+h4{
+    font-family: 'DM sans', sans-serif;
+    font-size: 24px;
+}
+
+h5{
+    font-family: 'DM sans', sans-serif;
+    font-size: 20px;
+    color: #BE6361;
+}
+
+.text_big{
+    font-family: 'DM sans', sans-serif;
+    font-size: 20px;
+    font-weight: regular;
+}
+
+.text{
+    font-family: 'DM sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.text_gray{
+    font-family: 'DM sans', sans-serif;
+    font-size: 20px;
+    font-weight: regular;
+    color: $text-black-50p;
+}
+
+.text_small{
+    font-family: 'DM sans', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.button_primary_light{
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
+    width: 170px;
+    height: 48px;
+    background: $primary1;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.button_secondary_light{
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
+    width: 170px;
+    height: 48px;
+    color: #BE6361;
+    border: solid 1px #BE6361;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.button_secondary_dark{
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
+    width: 170px;
+    height: 48px;
+    border: solid 1px #ffffff4b;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.button_primary_dark{
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
+    color: #2B2B2B;
+    width: 170px;
+    height: 48px;
+    background: $text-white;
+    border: solid 1px #2B2B2B;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.light_field_default{
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    input{
+        height: 48px;
+        border: solid 1px #DADADA;
+        padding: 0 0 0 10px;
+        border-radius: 3px;
+        color: $text-black;
+    }
+
+    select{
+        height: 48px;
+        border: solid 1px #DADADA;
+        border-radius: 3px;
+        color: $text-black;
+    }
+
+    label{
+        font-family: 'DM sans', sans-serif;
+        height: 26px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #333333;
+    }
+}
+
+.dark_field_default{
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+
+    input{
+        height: 48px;
+        border: solid 1px #555555;
+        border-radius: 3px;
+        color: $text-black-50p;
+        background: #444444;
+    }
+
+    select{
+        height: 48px;
+        border: solid 1px #555555;
+        border-radius: 3px;
+        color: $text-white-50p;
+        background: #444444;
+    }
+
+    label{
+        font-family: 'DM sans', sans-serif;
+        height: 26px;
+        font-size: 12px;
+        font-weight: bold;
+        color: $text-white;
+    }
+}
