@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans:wght@400;700&display=swap');
+
+$text-black: #333333;
+$text-black-50p: #3333337F;
+$primary1: #BE6361;
+$text-white: #fff;
+$text-white-50p: #ffffff7F;
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.canvas_1{
+    background: #FF8482;
+    .header{
+        display: flex;
+        align-items: center;
+        .navbar, .button{
+            visibility: hidden;
+        }
+        .logo{
+            position: absolute;
+            width: 50%;
+            left: 15px;
+        }
+        
+        .flyout_menu{
+            width: 35px;
+            display: inline;
+            position: absolute;
+            right: 15px;
+        }
+    }
+
+    .content{
+        flex-direction: column;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        
+        .left_content{
+            flex-direction: column;
+            width: 90%;
+            margin: 0;
+
+            h5{
+                margin: 20px 0 ;
+            }
+            
+            .light_field_default{
+                flex-direction: column;
+                width: 100%;
+                input{
+                    width: 95%;   
+                }
+                a{
+                    margin: 15px 0;
+                }
+            }
+
+            h1{
+                word-wrap: anywhere;
+                hyphens: auto;
+                font-size: 56px;
+            }
+        }
+
+        .right_content{
+            width: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1100px){
+    
+    .canvas_1{
+        height: 100%;
+        
+        .header{
+            display: flex;
+            justify-content: space-around;
+            padding: 16px 0 0 0;
+            
+            .logo{
+                position: static;
+                width: 120px;
+            }
+
+            .navbar{
+                display: flex;
+                font-weight: bold;
+                .navbar_item{
+                    width: 81px;
+                    text-align: center;
+                    border: none;
+                }
+                visibility: visible;
+            }
+    
+            .button{
+                border: solid 1px #FFFFFF7F;
+                color: #FFFFFF;
+                visibility: visible;
+            }
+    
+            .flyout_menu{
+                display: none;
+            }
+        }
+    
+        .content{
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            
+            .left_content{
+                margin: 0 0 5% 13%;
+
+                h5{
+                    color: $text-white;
+                }
+                
+                h1{
+                    font-size: 72px;
+                    word-wrap: anywhere;
+                    hyphens: auto;
+                    padding: 10px 0;
+                }
+
+                .light_field_default{
+                    flex-direction: row;
+                    width: 100%;
+                    padding: 10px 0;
+    
+                    input{
+                        width: 270px;
+                    }
+    
+                    a{
+                        margin: 0 0 0 1.5%;
+                    }
+                }
+            }
+    
+            .right_content{
+                margin: 5% 5% 0 0;
+                img{
+                    width: 47vw;
+                }
+            }
+        }   
+    }
+    
+}
