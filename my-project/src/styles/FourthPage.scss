@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans:wght@400;700&display=swap');
+
+$text-black: #333333;
+$text-black-50p: #3333337F;
+$primary1: #BE6361;
+$text-white: #fff;
+$text-white-50p: #ffffff7F;
+
+.canvas_4{
+    background: #FFF2DD;
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        .left_content4{
+            width: 90%;
+            padding: 50px 0 30px 0;
+            h5{
+                padding: 0 0 30px 0;
+            }
+            h2{
+                color: $text-black;
+                padding: 0 0 30px 0;
+                font-size: 40px;
+            }
+            ul{
+                padding: 0 0 40px 0;
+                li{
+                    display: flex;
+                    padding: 7px 0;
+                    .text{
+                        padding: 0 0 0 30px;
+                        color: $text-black;
+                        width: 80%;
+                    }
+                }
+            }
+        }
+        .right_content4{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1100px){
+    .canvas_4{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        .content{
+            width: 90%;
+            flex-direction: row;
+            align-items: center;
+            .left_content4{
+                padding: 0;
+                width: 30%;
+                height: 55%;
+                h2{
+                    font-size: 56px;
+                }
+            }
+            .right_content4{
+                width: 45vw;
+            }
+        }
+    }
+}

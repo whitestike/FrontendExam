@@ -16,6 +16,11 @@ $text-white-50p: #ffffff7F;
     list-style: none;
 }
 
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
 h1{
     font-family: 'Alfa Slab One', sans-serif;
     font-size: 72px;
@@ -56,7 +61,7 @@ h5{
 
 .text_gray{
     font-family: 'DM sans', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: regular;
     color: $text-black-50p;
 }

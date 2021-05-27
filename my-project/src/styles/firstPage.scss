@@ -6,12 +6,9 @@ $primary1: #BE6361;
 $text-white: #fff;
 $text-white-50p: #ffffff7F;
 
-body{
-    height: 100vh;
-    width: 100vw;
-}
-
 .canvas_1{
+    height: 100%;
+    width: 100%;
     background: #FF8482;
     .header{
         display: flex;

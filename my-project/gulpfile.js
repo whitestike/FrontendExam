@@ -65,7 +65,7 @@ function watchAll(){
 }
 
 function imageOpt(){
-    return gulp.src('./src/**/*.jpg')
+    return gulp.src('./src/**/*.png')
         .pipe(webp())
         .pipe(gulp.dest('./build'))
 }
