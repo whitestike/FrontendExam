@@ -4,32 +4,52 @@
     background: $background-red1;
     .header{
         display: flex;
+        justify-content: space-around;
         align-items: center;
+
         .navbar, .button{
             visibility: hidden;
         }
+        
         .logo{
             position: absolute;
             width: 50%;
             left: 15px;
+            cursor: pointer;
         }
         
-        .flyout_menu{
-            width: 35px;
-            display: inline;
-            position: absolute;
-            right: 15px;
+        .flyout_menu_cover{
+            .flyout_menu{
+                width: 35px;
+                display: inline;
+                position: absolute;
+                top: 25px;
+                right: 15px;
+            }
+            
+            .flyout_menu_links{
+                background-color: $primary1;
+                border: 1px solid $text-white-50p;
+                border-radius: 3px;
+                padding: 5px;
+                width: 70px;
+                height: 135px;
+                right: 5px;
+                top: 60px;
+                position: absolute;
+                ul li{
+                    padding: 3px 0;
+                }
+            }
         }
     }
 
     .content{
-        height: 100%;
-        width: 100%;
         flex-direction: column;
         padding: 0;
         display: flex;
         align-items: center;
-        
+
         .left_content{
             flex-direction: column;
             width: 90%;
@@ -79,7 +99,11 @@
             display: flex;
             justify-content: space-around;
             padding: 16px 0 0 0;
-            
+
+            .flyout_menu_cover{
+                display: none;
+            }
+
             .logo{
                 position: static;
                 width: 120px;

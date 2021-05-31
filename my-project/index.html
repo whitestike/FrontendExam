@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>examForntend</title>
     <link rel="stylesheet" href="build/styles/reset.css">
     <link rel="stylesheet" href="build/styles/firstPage.css">
     <link rel="stylesheet" href="build/styles/secondPage.css">
@@ -18,13 +18,24 @@
         <div class="header">
             <h3 class="logo">LOGO</h3>
             <ul class="navbar">
-                <li class="navbar_item"><a href="#" class="navbar_item_link"><p>About</p></a></li>
-                <li class="navbar_item"><a href="#" class="navbar_item_link"><p>Portfolio</p></a></li>
-                <li class="navbar_item"><a href="#" class="navbar_item_link"><p>Blog</p></a></li>
-                <li class="navbar_item"><a href="#" class="navbar_item_link"><p>Contact</p></a></li>
+                <li class="navbar_item"><a href="#scroll1" class="navbar_item_link"><p>Portfolio</p></a></li>
+                <li class="navbar_item"><a href="#scroll2" class="navbar_item_link"><p>About</p></a></li>
+                <li class="navbar_item"><a href="#scroll3" class="navbar_item_link"><p>Blog</p></a></li>
+                <li class="navbar_item"><a href="#scroll4" class="navbar_item_link"><p>Contact</p></a></li>
             </ul>
             <a href="#" class="button button_secondary_light">Sign up</a>
-            <img class="flyout_menu" src="build/images/list.svg" alt="flyout menu">
+            <div class="flyout_menu_cover">
+                <img class="flyout_menu" src="build/images/list.svg" alt="flyout menu">
+                <div class="flyout_menu_links">
+                    <ul>
+                        <li class="flyout_menu_item"><a href="#scroll1" class="navbar_item_link"><p>Portfolio</p></a></li>
+                        <li class="flyout_menu_item"><a href="#scroll2" class="navbar_item_link"><p>About</p></a></li>
+                        <li class="flyout_menu_item"><a href="#scroll3" class="navbar_item_link"><p>Blog</p></a></li>
+                        <li class="flyout_menu_item"><a href="#scroll4" class="navbar_item_link"><p>Contact</p></a></li>
+                        <li class="flyout_menu_item"><a href="#" class="navbar_item_link"><p>Login</p></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="content">
             <div class="left_content">
@@ -40,7 +51,7 @@
             </div>
         </div>
     </div>
-    <div class="canvas_2">
+    <div class="canvas_2" id="scroll1">
         <div class="content">
             <div class="left_content2">
                 <img src="build/images/image2.svg" alt="hero img of a guy at a desk">
@@ -53,7 +64,7 @@
             </div>
         </div>
     </div>
-    <div class="canvas_3">
+    <div class="canvas_3" id="scroll2">
         <div class="content">
             <div class="top_page">
                 <h5>Nominavi suavitate</h5>
@@ -95,7 +106,7 @@
             <a href="#" class="button_primary_light">Learn more</a>
         </div>
     </div>
-    <div class="canvas_4">
+    <div class="canvas_4" id="scroll3">
         <div class="content">
             <div class="left_content4">
                 <h5>Mel solum</h5>
@@ -129,7 +140,7 @@
             </div>
         </div>
     </div>
-    <div class="canvas_5">
+    <div class="canvas_5" id="scroll4">
         <div class="content">
             <h5>Eos lobortis inimicus</h5>
             <h2>Pro ad ubique erroribus in modo mutat sed</h2>
@@ -178,5 +189,8 @@
     <div class="copyright">
         <p class="text_gray"> © LOGO, 2019. All rights reserved. Created by Laaqiq.</p>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="build/scripts/main.min.js"></script>
 </body>
 </html>

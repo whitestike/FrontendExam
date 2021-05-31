@@ -1,6 +1,13 @@
-var x = 2;
-var y = 3;
+$(document).ready(() => {
+    console.log("doc ready");
+});
 
-function plus(x, y){
-    return x += y;
-}
+$(".flyout_menu_links").hide();
+
+$('.logo').on('click', () => {
+    location.reload();
+});
+
+$('.flyout_menu').on('click', function(){
+    $(".flyout_menu_links").slideToggle();
+});

@@ -2,13 +2,13 @@
 
 .canvas_4{
     background: $background-baige;
+    width: 100%;
     .content{
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        height: 100%;
-        width: 100%;
         .left_content4{
             width: 90%;
             padding: 50px 0 30px 0;
@@ -55,8 +55,8 @@
             flex-direction: row;
             align-items: center;
             .left_content4{
-                padding: 0;
-                width: 30%;
+                padding: 0 0 0 70px;
+                width: 40%;
                 height: 55%;
                 h2{
                     font-size: 56px;

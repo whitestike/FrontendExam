@@ -21,5 +21,8 @@
     "gulp-webp": "^4.0.1",
     "node-sass": "^6.0.0",
     "postcss": "^8.2.15"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   }
 }
