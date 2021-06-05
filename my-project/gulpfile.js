@@ -8,6 +8,7 @@ const cssnano = require('cssnano');
 const browserSync = require('browser-sync');
 const webp = require("gulp-webp");
 const gulp_sass = require("gulp-sass");
+const image = require("gulp-image");
 
 function clean(){
     return cleanup([
@@ -39,6 +40,7 @@ function sass(){
             autoprefixer(),
             cssnano(),
         ]))
+        .pipe(rename({ extname: '.min.css' }))
         .pipe(gulp.dest('./build'));
 }
 
@@ -64,27 +66,28 @@ function watchAll(){
     gulp.watch("./*.html").on('change', browserSync.reload);
 }
 
-function imageOpt(){
+function pngOpt(){
     return gulp.src('./src/**/*.png')
+        .pipe(webp())
+        .pipe(gulp.dest('./build'))
+}
+
+function jpgOpt(){
+    return gulp.src('./src/**/*.jpg')
         .pipe(webp())
         .pipe(gulp.dest('./build'))
 }
 
 function svgOpt(){
     return gulp.src('./src/**/*.svg')
-        .pipe(webp())
+        .pipe(image())
         .pipe(gulp.dest('./build'))
 }
 
 function build(cb){cb();}
 
-exports.build = gulp.series(clean, gulp.parallel(styles, scripts, svgOpt,imageOpt, sass));
-exports.scripts = scripts;
-exports.styles = styles;
+exports.build = gulp.series(clean, gulp.parallel(styles, scripts, svgOpt, pngOpt, jpgOpt, sass));
 exports.clean = clean;
-exports.imageOpt = imageOpt;
-exports.svgOpt = svgOpt;
-exports.sass = sass;
 exports.watch = watchAll;
 
-exports.default = gulp.series(clean, gulp.parallel(styles, scripts, imageOpt, svgOpt, sass), watchAll);
+exports.default = gulp.series(clean, gulp.parallel(styles, scripts, pngOpt, jpgOpt, svgOpt, sass), watchAll);
