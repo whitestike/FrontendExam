@@ -24,6 +24,8 @@
     "postcss": "^8.2.15"
   },
   "dependencies": {
-    "jquery": "^3.6.0"
+    "gulp": "^4.0.2",
+    "jquery": "^3.6.0",
+    "package": "^1.0.1"
   }
 }
